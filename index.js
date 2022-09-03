@@ -35,12 +35,12 @@ function contact (event) {
     event.preventDefault();
     
     emailjs
-    .sendForm(
-        `service_ju9czme`,
-        `template_p5md8rc`,
-        event.target,
-        `01135LlMefKItv48l`
-        )
+    // .sendForm(
+    //     `service_ju9czme`,
+    //     `template_p5md8rc`,
+    //     event.target,
+    //     `01135LlMefKItv48l`
+    //     )
     .then(() => {
         loading.classList.remove(`modal__overlay--visable`);
         success.classList += ` modal__overlay--visable`;
