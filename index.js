@@ -34,19 +34,23 @@ function contact(event) {
   loading.classList += ` modal__overlay--visable`;
   event.preventDefault();
 
-  emailjsx
+  //   setTimeout(() => {
+  //     console.log("it worked");
+  //     loading.classList.remove(`modal__overlay--visable`);
+  //     alert(
+  //       `The Email service is temporarily unavailable. Please contact me directly on tdl9716@gmail.com`
+  //     );
+  //   }, 500);
 
-    // .sendForm(
-    //     `service_ju9czme`,
-    //     `template_p5md8rc`,
-    //     event.target,
-    //     `01135LlMefKItv48l`
-    //     )
-    .then(() => {
+  emailjs
+    .sendForm(`service_ju9czme`, `template_p5md8rc`, event.target)
+    .then((response) => {
+      console.log("it worked", response.status, response.text);
       loading.classList.remove(`modal__overlay--visable`);
       success.classList += ` modal__overlay--visable`;
     })
-    .catch(() => {
+    .catch((error) => {
+      console.log("did not work", error);
       loading.classList.remove(`modal__overlay--visable`);
       alert(
         `The Email service is temporarily unavailable. Please contact me directly on tdl9716@gmail.com`
