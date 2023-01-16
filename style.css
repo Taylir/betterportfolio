@@ -197,7 +197,7 @@ nav {
 }
 
 .dark-theme .title,
-.dark-theme .section-title,
+.dark-theme .section__title,
 .dark-theme .section-sub-title,
 .dark-theme .nav__link--anchor,
 .dark-theme .fa-solid,
@@ -224,6 +224,11 @@ nav {
 .dark-theme .landing__contact-button i {
   color: #242424;
 }
+
+.dark-theme .project__wrapper {
+  box-shadow: 0 12px 20px 0 rgba(134, 134, 134, 0.45);
+}
+
 /* 
 
 
@@ -382,6 +387,7 @@ MODAL
 .modal__languages {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 6px;
 }
 
 .modal__language--img--wrapper {
@@ -391,6 +397,8 @@ MODAL
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
 }
 
 .modal__language--img {
@@ -409,7 +417,7 @@ MODAL
 
 .language__name {
   position: absolute;
-  bottom: -16px;
+  top: -10px;
   transform: scale(0);
   transition: all 300ms ease;
 }
@@ -530,6 +538,10 @@ Projects
   font-size: 48px;
   margin-bottom: 60px;
   z-index: 50;
+}
+
+.project {
+  margin-top: 60px;
 }
 
 .project__img {
