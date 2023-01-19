@@ -774,6 +774,26 @@ footer {
   }
 
   .modal__half {
-    padding: 40px;
+    padding: 20px;
+  }
+  .modal__contact {
+    height: 45vh;
+  }
+  .modal__about {
+    height: 55vh;
+  }
+
+  .input {
+    height: 20px;
+  }
+
+  .modal__language--img {
+    height: 28px;
+    width: 28px;
+  }
+
+  .modal__exit {
+    position: absolute;
+    top: 8px;
   }
 }
